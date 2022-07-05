@@ -1,0 +1,17 @@
+body {
+    background-image: url("../imgs/back.gif");
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: aliceblue;
+}
+
+/* .navigation {
+    display: flex;
+    flex-direction: column;
+} */
