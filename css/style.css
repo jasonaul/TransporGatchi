@@ -4,12 +4,40 @@ body {
     background-size: cover;    
 }
 
-.navigation {
+
+
+.navbar {
+/*     display: flex;
+    flex-direction: column; */
+    background-color: aliceblue;
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+    width: 10;
+    left: 100;
+    padding-top: 15px;
+}
+
+.navbarTransport {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.action-items {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    background-color: aliceblue;
+    width:100%;
+    height: 100%;
+    left: 100;
+    padding-bottom: 15px;
 }
+
+#start, #passengers, #schedule, #maintenance {
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
 
 /* .navigation {
     display: flex;
