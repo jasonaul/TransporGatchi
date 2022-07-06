@@ -8,6 +8,7 @@ class Transport {
         this.name = name;
         this.passenger = passenger;
         this.ontime = ontime;
+        this.maintenance = maintenance;
         this.age = age
     }
 
@@ -40,24 +41,30 @@ class TransporGatchi extends Transport {
 // I think we have the class situation set. 
 
 
-const transportSystem = new TransporGatchi ("")
+const transportSystem = new TransporGatchi ("k");
 
 //Testing out the intervals
 
 const newGame = {
-    setPassenger(){
+    setPassengers(){
         const passInterval = setInterval(() => {
-            const passengerID = document.querySelector("#Passengers");
+            const passengerID = document.querySelector('#Passengers');
         passengerID.innerHTML = `Passengers: ${transportSystem.passenger}`;
 
-        transportSystem.passenger -- 
+        transportSystem.passenger --; 
 
         if(transportSystem.passenger <=0) {
             alert(`You haven't kept up with demand! Your residents have REVOLTED.`);
             clearInterval(passInterval);
         }
-        }, 100) 
+        }, 1000)  
+        passengerButton.addEventListener("click", () =>{
+            transportSystem.addPassenger();
+            const passengerID = document.querySelector ('#Passengers');
+            passInterval.textContent = `Passengers: ${transportSystem.passenger}`
+        })
     }
+    
 }
 
-console.log(transportSystem.passenger)
+console.log(transportSystem.name)
