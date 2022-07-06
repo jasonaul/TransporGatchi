@@ -9,19 +9,23 @@ body {
 .navbar {
 /*     display: flex;
     flex-direction: column; */
-    background-color: aliceblue;
+    background-color: #0F0097;
+    border-radius: 25px;
     vertical-align: middle;
     display: inline-block;
     height: 100%;
     width: 10;
     left: 100;
     padding-top: 15px;
+    margin-top: 25px;
 }
 
 .navbarTransport {
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
+    color: red;
+    font-size: 30px;
 }
 
 .action-items {
@@ -36,6 +40,14 @@ body {
 #start, #passengers, #schedule, #maintenance {
     margin-bottom: 25px;
     padding: 10px;
+}
+
+.btn-action {
+    background-color: deepskyblue;
+}
+
+.btn-start {
+    background-color: aquamarine;
 }
 
 
