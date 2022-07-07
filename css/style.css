@@ -6,7 +6,28 @@ body {
 
 #Status {
     color: white;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    position: absolute;
+    
 }
+
+.charName{
+    background-color: rgb(242, 11, 231);
+    color:#2109f5;
+    border-radius: 30px;
+    display: flex;
+    position: fixed;
+    left: 35%;
+    align-items: center;
+    justify-content: center;
+   /*  text-align: center; */
+    width: 50%;
+}
+
+
+
 
 .navbar {
 /*     display: flex;
@@ -20,6 +41,41 @@ body {
     left: 100;
     padding-top: 15px;
     margin-top: 25px;
+}
+
+.stats {
+    position: relative;
+    left: -25px;
+    border: 3px solid whitesmoke;
+    vertical-align: middle;
+    font-size: 16px;
+    font-family: Impact, 
+    Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    border-radius: 5px;
+    background: blue;
+    margin: auto;
+    justify-content: center;
+    
+   /*  min-width: 500px; */
+    min-height: 30px;
+    line-height: 30px;
+    padding: 5px;
+
+  /*   padding-left: 50px; */
+   /*  left: 100; */
+    margin-left: 3.5%;
+    margin-right: -10%;
+    letter-spacing: 1px;
+
+  
+/*  column-span: none;
+    justify-content: right;
+    background-color: blue;
+    border-radius: 25px;
+    vertical-align: middle;
+    display: inline; 
+    margin-left: 100px;  */
 }
 
 .navbarTransport {
