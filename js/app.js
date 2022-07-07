@@ -113,14 +113,18 @@ const newGame = {
         })
         maintenanceButton.addEventListener('click', function(){
             document.querySelector(`#lights`).src='imgs/maintenance.png'
+            lightsOn.style.display = 'block';
             setTimeout(hide, 1000);
+            function hide() {
+                lightsOn.style.display = 'none';
+                document.querySelector(`#lights`).src=''
+    
+            }
         });
-        function hide() {
-            /* button.style.display = 'block'; */
-            lightsOn.style.display = 'none';
-            /* lightsImage = (lightsImage + 1) % lightsOn.length; */
-        }
+
     },
+
+                /* lightsImage = (lightsImage + 1) % lightsOn.length; */
 
     setAge() {
         const intervaID = setInterval(() => {

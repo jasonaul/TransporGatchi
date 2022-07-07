@@ -15,6 +15,16 @@ img {
     margin-left: -50px;
 }
 
+#lights{
+    max-width:600px;
+    position:relative;
+    top: 50%;
+    right: 50%;
+    margin-top: -250px; 
+    margin-right: 250px;
+    z-index: 1;
+}
+
 
 /* Note: I found some help on animations from 'https://css-tricks.com/making-css-animations-feel-natural/' and played around with it until it felt right. */
 #transit {  
