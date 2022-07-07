@@ -170,9 +170,9 @@ const newGame = {
         newGame.setAge();
     }
 }
-///Finishing objects
+///Finishing objects above.
 
-///Starting the game
+///Starting the game below.
 
 buttonBegin.addEventListener("click", (event) =>{
     event.target.disabled = true;
@@ -180,4 +180,3 @@ buttonBegin.addEventListener("click", (event) =>{
 })
 
 
-console.log(transportSystem.passenger)
