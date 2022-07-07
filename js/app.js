@@ -34,7 +34,7 @@ class TransporGatchi extends Transport {
         this.ontime ++
     }
     adjustMaintenance(){
-        this.maintenance --
+        this.maintenance = 0
     }
 }
 
@@ -61,7 +61,7 @@ const newGame = {
             alert(`You haven't kept up with demand! Your residents have RIOTED.`);
             clearInterval(passInterval);
         }
-        }, 2000)  
+        }, 2750)  
         passengerButton.addEventListener("click", () =>{
             transportSystem.addPassenger();
             const passengerID = document.querySelector ('#Passengers-Carry');
@@ -82,7 +82,7 @@ const newGame = {
             alert(`Your transportation system is woefully off-schedule! Your residents have RIOTED.`);
             clearInterval(passInterval);
         }
-        }, 2000)  
+        }, 2500)  
         scheduleButton.addEventListener("click", () =>{
             transportSystem.adjustSchedule();
             const scheduleID = document.querySelector ('#Schedule-Show');
@@ -101,12 +101,25 @@ const newGame = {
             alert(`You failed to keep up with maintenance of your public transit system! Your residents have RIOTED.`);
             clearInterval(passInterval);
         }
-        }, 2000)  
+        }, 1750)  
+
+        const lightsOn = document.querySelector('#lights');
+        let lightsImage = 0;
+
         maintenanceButton.addEventListener("click", () =>{
             transportSystem.adjustMaintenance();
             const maintenanceID = document.querySelector ('#Maintenance-Show');
             passInterval.innerHTML = `Maintenance: ${transportSystem.maintenance}`
         })
+        maintenanceButton.addEventListener('click', function(){
+            document.querySelector(`#lights`).src='imgs/maintenance.png'
+            setTimeout(hide, 1000);
+        });
+        function hide() {
+            /* button.style.display = 'block'; */
+            lightsOn.style.display = 'none';
+            /* lightsImage = (lightsImage + 1) % lightsOn.length; */
+        }
     },
 
     setAge() {
@@ -116,12 +129,27 @@ const newGame = {
             transportSystem.age ++;
 
             if(transportSystem.age == 1){
-                window.confirm(`Congratultions! The city has granted you a taxi permit!`);
+                window.confirm(`No one can ride a paper airplane! The city has granted you a taxi permit!`);
                 document.querySelector(`#transit`).src='imgs/taxi.gif';
             }
             
+            if(transportSystem.age == 5) {
+                window.confirm(`Let's make taxi fares a thing of the past! You've upgraded your city's transport to trains and subways!`)
+                document.querySelector(`#transit`).src='imgs/train.png';
+            }
 
-        }, 1000)
+            if(transportSystem.age == 12){
+                window.confirm(`The public's trust in you grows. You've invested money into bringing hovercars to your city!`)
+                document.querySelector(`#transit`).src='imgs/hover.png'
+            }
+
+            if(transportSystem.age == 20){
+                window.confirm(`You've discovered teleportation! Your citizens rejoice at instantaneous travel!`)
+                document.querySelector(`#transit`).src=``
+                document.querySelector(`#portal`).src='imgs/portal.gif'
+            }
+
+        }, 3250)
     },
 
     setName () {
