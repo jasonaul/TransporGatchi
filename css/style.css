@@ -4,14 +4,52 @@ body {
     background-size: cover;    
 }
 
+img {
+    /* vertical-align: middle; */
+    width:50%;
+    max-width:150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px; 
+    margin-left: -50px;
+}
+
+
+/* Note: I found some help on animations from 'https://css-tricks.com/making-css-animations-feel-natural/' and played around with it until it felt right. */
+#transit {  
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+    animation-name: bounce; 
+     animation-timing-function: linear;
+}
+/* (NOTE: This was my original boring animation I made based off of some Googling. Still a bit confusing. @keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateX(-100px); }
+    100% { transform: translateY(0); }
+} */
+
+    
+@keyframes bounce {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1,1)   translateX(10); }
+    30%  { transform: scale(.9,1.1)   translateX(-75px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateX(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
 #Status {
     color: white;
     top: 50%;
-    right: 50%;
     bottom: 50%;
     position: absolute;
     
 }
+
+
 
 .charName{
     background-color: rgb(242, 11, 231);

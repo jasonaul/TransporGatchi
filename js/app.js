@@ -114,6 +114,13 @@ const newGame = {
             const ageID = document.querySelector('#Age-Show')
             ageID.innerHTML = `Age: ${transportSystem.age}`;
             transportSystem.age ++;
+
+            if(transportSystem.age == 1){
+                window.confirm(`Congratultions! The city has granted you a taxi permit!`);
+                document.querySelector(`#transit`).src='imgs/taxi.gif';
+            }
+            
+
         }, 1000)
     },
 
