@@ -40,8 +40,8 @@ class TransporGatchi extends Transport {
 
 // I think we have the class situation set. 
 
-
-const transportSystem = new TransporGatchi ("k");
+const buttonBegin = document.querySelector('#start')
+const transportSystem = new TransporGatchi ("");
 const passengerButton = document.querySelector('#passengers')
 const scheduleButton = document.querySelector('#schedule')
 const maintenanceButton = document.querySelector('#maintenance')
@@ -57,7 +57,7 @@ const newGame = {
 
         transportSystem.passenger --; 
 
-        if(transportSystem.passenger ===0) {
+        if(transportSystem.passenger === -2) {
             alert(`You haven't kept up with demand! Your residents have RIOTED.`);
             clearInterval(passInterval);
         }
@@ -78,7 +78,7 @@ const newGame = {
 
         transportSystem.ontime --; 
 
-        if(transportSystem.ontime ===0) {
+        if(transportSystem.ontime === -2) {
             alert(`Your transportation system is woefully off-schedule! Your residents have RIOTED.`);
             clearInterval(passInterval);
         }
@@ -97,7 +97,7 @@ const newGame = {
 
         transportSystem.maintenance ++; 
 
-        if(transportSystem.maintenance === 11) {
+        if(transportSystem.maintenance === 12) {
             alert(`You failed to keep up with maintenance of your public transit system! Your residents have RIOTED.`);
             clearInterval(passInterval);
         }
@@ -108,9 +108,37 @@ const newGame = {
             passInterval.innerHTML = `Maintenance: ${transportSystem.maintenance}`
         })
     },
-}
 
-newGame.setPassengers()
-newGame.setSchedule()
-newGame.setMaintenance()
+    setAge() {
+        const intervaID = setInterval(() => {
+            const ageID = document.querySelector('#Age-Show')
+            ageID.innerHTML = `Age: ${transportSystem.age}`;
+            transportSystem.age ++;
+        }, 1000)
+    },
+
+    setName () {
+        transportSystem.name = prompt(`What is your public transit system's name?`, "Enter your transit system's name")
+        const nameID = document.querySelector(`.charName`);
+        nameID.innerHTML = (`${transportSystem.name} Transport System`)
+    },
+
+    gameBegin(){
+        newGame.setName();
+        newGame.setPassengers();
+        newGame.setSchedule();
+        newGame.setMaintenance();
+        newGame.setAge();
+    }
+}
+///Finishing objects
+
+///Starting the game
+
+buttonBegin.addEventListener("click", (event) =>{
+    event.target.disabled = true;
+    newGame.gameBegin();
+})
+
+
 console.log(transportSystem.passenger)
