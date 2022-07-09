@@ -179,4 +179,5 @@ buttonBegin.addEventListener("click", (event) =>{
     newGame.gameBegin();
 })
 
+console.log("Goodbye")
 

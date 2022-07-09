@@ -4,21 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TransporGatchi</title>
+    <title>TransporGotchi</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1 class ="charName">Municipal Transport System</h1>
     <nav class="navbar">
         <div class="navigation">
-            <a class="navbarTransport" href="#">TransporGatchi</a>
+            <a class="navbarTransport" href="#">TransporGotchi</a>
         <div class="action-items">
-            <button id="start" class="button btn-start">Start building your TransporGatchi!</button>
+            <button id="start" class="button btn-start">Start building your TransporGotchi!</button>
             <button id="passengers" class="button btn-action">Carry Passengers</button>
             <button id="schedule" class="button btn-action">Adjust Schedule for Efficiency</button>
             <button id="maintenance" class="button btn-action">Maintenance Downtime</button>
         </div>
     </nav>
+
+<!-- Below, I created an overlay popup for the rules, which I found code for on Stack Exchnge and tailored for this game: https://stackoverflow.com/questions/47960621/html-button-on-click-show-overlay-layer -->
+<div style="height: 100px;">
+    <div class="box">
+        <a class="rulebutton" href="#popuprule">Show Rules</a>
+</div>
+
+    <div id="popuprule" class="overlay">
+        <div class="popup">
+        <h2>Rules</h2>
+        <a class="close" href="#">x</a>
+            <div class="rules">
+                A transportation-twist on the classic Tamagotchi game! In order to keep your public transit system "alive", you need to continuously "feed" your system passengers and never let it fall to zero, adjust your schedule so it never falls to zero, and conduct routine maintenance by never letting "Maintenance Attention" reach 10. Can you make it to Age 20?
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="all-divs">
     <div class="images">
             <img class="animate" id="transit" src="../imgs/paper.gif">
