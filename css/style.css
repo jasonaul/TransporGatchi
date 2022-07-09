@@ -105,11 +105,13 @@ img {
 
 #lights{
     max-width:600px;
-    position:relative;
+  /*   position:relative;
     top: 50%;
-    right: 50%;
-    margin-top: -250px; 
-    margin-right: 250px;
+    right: 50%; */
+ /*    margin-top: -250px; 
+    margin-right: 250px;  REMOVED these elements to better center the lightsOn/Off image. */
+    top: 50%;
+    left: 30%;
     z-index: 1;
 }
 
