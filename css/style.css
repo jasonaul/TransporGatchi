@@ -1,3 +1,5 @@
+html {height: 100%;}
+
 body {
     background-image: url("../imgs/back.gif");
     background-repeat: no-repeat;
@@ -32,9 +34,9 @@ img {
     font-size: 1em;
     padding: 10px;
     background:rgb(53, 185, 229);
-    color: #fff;
+    color: white;
     border: 2px solid blue;
-    border-radius: 20px/50px;
+    border-radius: 20px 50px;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
@@ -133,13 +135,15 @@ img {
     
 @keyframes bounce {
     0%   { transform: scale(1,1)      translateY(0); }
-    10%  { transform: scale(1,1)   translateX(10); }
+    10%  { transform: scale(1,1)      translateX(10); }
     30%  { transform: scale(.9,1.1)   translateX(-75px); }
     50%  { transform: scale(1.05,.95) translateY(0); }
     57%  { transform: scale(1,1)      translateX(-7px); }
     64%  { transform: scale(1,1)      translateY(0); }
     100% { transform: scale(1,1)      translateY(0); }
 }
+
+/* The above animation has different steps that move it horizontally, not vertically. Transform/scale helps resize the element on the plane, which gives it a sort-of bounce look to it when it moves! */
 
 #Status {
     color: white;
@@ -152,15 +156,14 @@ img {
 
 
 .charName{
-    background-color: rgb(242, 11, 231);
+    background-color: rgb(210, 178, 209);
     color:#2109f5;
     border-radius: 30px;
     display: flex;
     position: fixed;
-    left: 35%;
+    left: 25%;
     align-items: center;
     justify-content: center;
-   /*  text-align: center; */
     width: 50%;
 }
 
@@ -168,8 +171,6 @@ img {
 
 
 .navbar {
-/*     display: flex;
-    flex-direction: column; */
     background-color: #0F0097;
     border-radius: 25px;
     vertical-align: middle;
@@ -182,8 +183,9 @@ img {
 }
 
 .stats {
-    position: relative;
-    left: -25px;
+    display: inline-block;
+    position: fixed;
+    left: -15px;
     border: 3px solid whitesmoke;
     vertical-align: middle;
     font-size: 16px;
@@ -194,26 +196,16 @@ img {
     background: blue;
     margin: auto;
     justify-content: center;
-    
-   /*  min-width: 500px; */
     min-height: 30px;
     line-height: 30px;
     padding: 5px;
+    top: 50%;
+    left: 40%;
+    margin-top: -10px;
+    margin-left: -100px;
+    transform: translate(-20%, 400%);
 
-  /*   padding-left: 50px; */
-   /*  left: 100; */
-    margin-left: 3.5%;
-    margin-right: -10%;
     letter-spacing: 1px;
-
-  
-/*  column-span: none;
-    justify-content: right;
-    background-color: blue;
-    border-radius: 25px;
-    vertical-align: middle;
-    display: inline; 
-    margin-left: 100px;  */
 }
 
 .navbarTransport {
@@ -248,7 +240,3 @@ img {
 }
 
 
-/* .navigation {
-    display: flex;
-    flex-direction: column;
-} */

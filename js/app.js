@@ -124,7 +124,7 @@ const newGame = {
 
     },
 
-                /* lightsImage = (lightsImage + 1) % lightsOn.length; */
+   
 
     setAge() {
         const intervaID = setInterval(() => {
